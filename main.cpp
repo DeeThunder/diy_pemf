@@ -291,6 +291,7 @@ void setupWebServer() {
     signalSerial.write(formatDutyCommand(currentDuty).c_str());
     RELAY_TIMER_SERIAL.write(formatTimingCommand(currentTime).c_str());
     RELAY_TIMER_SERIAL.write(formatTimingCommand2(currentTime).c_str());
+    RELAY_TIMER_SERIAL.write("P6");
 
     // Redirect back to GET page (refresh with updated values)
     server.sendHeader("Location", "/");
