@@ -344,22 +344,12 @@ void setupWebServer() {
 }
 
 
-
-
-
-
-
-
-
 void setup() {
   setupSerial();
   setupModules();
-
   setupOLED();
   setupWiFiAP();
-
   setupWebServer();
-
   // ** Initial call to display default values on OLED after everything is set up **
   updateOLEDDisplayParameters();
 }
